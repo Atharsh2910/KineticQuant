@@ -1,0 +1,501 @@
+sme_id,company_name,industry,primary_commodity_ticker,credit_tier_baseline,created_at
+SME-10000,Company 1 Corp,Chemicals & Plastics,RUBBER,C,2025-06-21
+SME-10001,Company 2 Corp,Food Processing,COTTON,B,2025-08-30
+SME-10002,Company 3 Corp,Automotive Parts,PALM_OIL,B,2025-07-06
+SME-10003,Company 4 Corp,Food Processing,STEEL,C,2025-08-18
+SME-10004,Company 5 Corp,Food Processing,STEEL,B,2026-02-28
+SME-10005,Company 6 Corp,Electronics Manufacturing,COTTON,A,2025-06-06
+SME-10006,Company 7 Corp,Automotive Parts,RUBBER,B,2026-06-22
+SME-10007,Company 8 Corp,Automotive Parts,RUBBER,B,2025-10-12
+SME-10008,Company 9 Corp,Automotive Parts,PALM_OIL,B,2026-04-19
+SME-10009,Company 10 Corp,Food Processing,COTTON,B,2025-07-07
+SME-10010,Company 11 Corp,Chemicals & Plastics,STEEL,C,2025-11-20
+SME-10011,Company 12 Corp,Automotive Parts,RUBBER,C,2026-05-21
+SME-10012,Company 13 Corp,Food Processing,COTTON,B,2025-06-26
+SME-10013,Company 14 Corp,Electronics Manufacturing,RUBBER,A,2025-12-09
+SME-10014,Company 15 Corp,Chemicals & Plastics,RUBBER,C,2025-10-10
+SME-10015,Company 16 Corp,Electronics Manufacturing,STEEL,C,2025-08-07
+SME-10016,Company 17 Corp,Chemicals & Plastics,LITHIUM,A,2026-01-04
+SME-10017,Company 18 Corp,Food Processing,PALM_OIL,C,2025-07-18
+SME-10018,Company 19 Corp,Textile & Apparel,PALM_OIL,C,2025-08-17
+SME-10019,Company 20 Corp,Chemicals & Plastics,STEEL,B,2026-04-08
+SME-10020,Company 21 Corp,Electronics Manufacturing,RUBBER,B,2025-08-17
+SME-10021,Company 22 Corp,Food Processing,COTTON,B,2026-03-12
+SME-10022,Company 23 Corp,Chemicals & Plastics,RUBBER,A,2025-10-23
+SME-10023,Company 24 Corp,Textile & Apparel,STEEL,B,2025-06-13
+SME-10024,Company 25 Corp,Textile & Apparel,PALM_OIL,C,2026-06-24
+SME-10025,Company 26 Corp,Automotive Parts,RUBBER,A,2026-04-08
+SME-10026,Company 27 Corp,Automotive Parts,PALM_OIL,B,2025-12-05
+SME-10027,Company 28 Corp,Electronics Manufacturing,COTTON,B,2025-06-08
+SME-10028,Company 29 Corp,Chemicals & Plastics,PALM_OIL,B,2025-06-06
+SME-10029,Company 30 Corp,Chemicals & Plastics,PALM_OIL,C,2025-08-21
+SME-10030,Company 31 Corp,Automotive Parts,LITHIUM,B,2026-06-09
+SME-10031,Company 32 Corp,Chemicals & Plastics,LITHIUM,B,2025-06-13
+SME-10032,Company 33 Corp,Chemicals & Plastics,LITHIUM,B,2026-06-28
+SME-10033,Company 34 Corp,Textile & Apparel,PALM_OIL,B,2026-02-24
+SME-10034,Company 35 Corp,Automotive Parts,STEEL,A,2025-09-07
+SME-10035,Company 36 Corp,Food Processing,PALM_OIL,B,2025-12-25
+SME-10036,Company 37 Corp,Automotive Parts,STEEL,A,2025-07-04
+SME-10037,Company 38 Corp,Food Processing,STEEL,A,2026-06-17
+SME-10038,Company 39 Corp,Textile & Apparel,LITHIUM,B,2026-06-19
+SME-10039,Company 40 Corp,Electronics Manufacturing,RUBBER,B,2026-04-05
+SME-10040,Company 41 Corp,Chemicals & Plastics,COTTON,C,2026-06-19
+SME-10041,Company 42 Corp,Textile & Apparel,LITHIUM,B,2025-05-30
+SME-10042,Company 43 Corp,Chemicals & Plastics,LITHIUM,B,2026-06-06
+SME-10043,Company 44 Corp,Electronics Manufacturing,RUBBER,B,2025-09-03
+SME-10044,Company 45 Corp,Electronics Manufacturing,COTTON,A,2025-10-31
+SME-10045,Company 46 Corp,Textile & Apparel,PALM_OIL,B,2026-03-01
+SME-10046,Company 47 Corp,Electronics Manufacturing,PALM_OIL,A,2026-02-04
+SME-10047,Company 48 Corp,Food Processing,LITHIUM,C,2026-05-07
+SME-10048,Company 49 Corp,Electronics Manufacturing,COTTON,A,2025-11-05
+SME-10049,Company 50 Corp,Chemicals & Plastics,LITHIUM,B,2025-07-10
+SME-10050,Company 51 Corp,Chemicals & Plastics,STEEL,A,2026-01-09
+SME-10051,Company 52 Corp,Chemicals & Plastics,LITHIUM,C,2025-06-04
+SME-10052,Company 53 Corp,Chemicals & Plastics,LITHIUM,B,2025-11-22
+SME-10053,Company 54 Corp,Food Processing,PALM_OIL,B,2026-03-04
+SME-10054,Company 55 Corp,Automotive Parts,PALM_OIL,A,2025-08-26
+SME-10055,Company 56 Corp,Textile & Apparel,PALM_OIL,B,2025-12-30
+SME-10056,Company 57 Corp,Chemicals & Plastics,STEEL,A,2025-09-16
+SME-10057,Company 58 Corp,Electronics Manufacturing,PALM_OIL,C,2025-08-28
+SME-10058,Company 59 Corp,Chemicals & Plastics,COTTON,A,2025-09-04
+SME-10059,Company 60 Corp,Electronics Manufacturing,RUBBER,A,2026-04-10
+SME-10060,Company 61 Corp,Electronics Manufacturing,COTTON,A,2025-12-02
+SME-10061,Company 62 Corp,Chemicals & Plastics,COTTON,B,2026-02-01
+SME-10062,Company 63 Corp,Food Processing,PALM_OIL,B,2026-05-25
+SME-10063,Company 64 Corp,Electronics Manufacturing,RUBBER,A,2025-07-14
+SME-10064,Company 65 Corp,Electronics Manufacturing,RUBBER,B,2025-08-23
+SME-10065,Company 66 Corp,Chemicals & Plastics,RUBBER,B,2025-07-05
+SME-10066,Company 67 Corp,Electronics Manufacturing,STEEL,B,2026-05-03
+SME-10067,Company 68 Corp,Electronics Manufacturing,PALM_OIL,B,2026-02-20
+SME-10068,Company 69 Corp,Chemicals & Plastics,RUBBER,B,2025-12-11
+SME-10069,Company 70 Corp,Chemicals & Plastics,STEEL,B,2025-10-31
+SME-10070,Company 71 Corp,Textile & Apparel,LITHIUM,A,2026-05-27
+SME-10071,Company 72 Corp,Food Processing,LITHIUM,A,2026-03-30
+SME-10072,Company 73 Corp,Food Processing,STEEL,C,2025-12-06
+SME-10073,Company 74 Corp,Electronics Manufacturing,STEEL,C,2025-07-13
+SME-10074,Company 75 Corp,Food Processing,PALM_OIL,B,2025-06-05
+SME-10075,Company 76 Corp,Electronics Manufacturing,PALM_OIL,A,2025-08-03
+SME-10076,Company 77 Corp,Textile & Apparel,LITHIUM,B,2025-08-30
+SME-10077,Company 78 Corp,Chemicals & Plastics,RUBBER,B,2025-07-16
+SME-10078,Company 79 Corp,Chemicals & Plastics,LITHIUM,A,2025-11-30
+SME-10079,Company 80 Corp,Chemicals & Plastics,RUBBER,A,2026-01-23
+SME-10080,Company 81 Corp,Food Processing,RUBBER,B,2026-06-07
+SME-10081,Company 82 Corp,Textile & Apparel,PALM_OIL,B,2025-09-11
+SME-10082,Company 83 Corp,Food Processing,COTTON,A,2026-06-27
+SME-10083,Company 84 Corp,Food Processing,COTTON,A,2025-11-23
+SME-10084,Company 85 Corp,Textile & Apparel,STEEL,A,2025-07-02
+SME-10085,Company 86 Corp,Textile & Apparel,PALM_OIL,B,2025-06-14
+SME-10086,Company 87 Corp,Textile & Apparel,RUBBER,A,2026-06-11
+SME-10087,Company 88 Corp,Textile & Apparel,COTTON,A,2026-01-30
+SME-10088,Company 89 Corp,Chemicals & Plastics,RUBBER,B,2026-05-12
+SME-10089,Company 90 Corp,Automotive Parts,COTTON,A,2026-01-05
+SME-10090,Company 91 Corp,Automotive Parts,COTTON,B,2026-03-27
+SME-10091,Company 92 Corp,Textile & Apparel,COTTON,A,2026-03-18
+SME-10092,Company 93 Corp,Automotive Parts,PALM_OIL,A,2025-10-24
+SME-10093,Company 94 Corp,Automotive Parts,LITHIUM,A,2026-03-06
+SME-10094,Company 95 Corp,Textile & Apparel,RUBBER,B,2025-07-12
+SME-10095,Company 96 Corp,Automotive Parts,PALM_OIL,C,2025-11-15
+SME-10096,Company 97 Corp,Food Processing,PALM_OIL,C,2026-04-26
+SME-10097,Company 98 Corp,Electronics Manufacturing,PALM_OIL,B,2025-07-31
+SME-10098,Company 99 Corp,Electronics Manufacturing,PALM_OIL,B,2025-10-12
+SME-10099,Company 100 Corp,Textile & Apparel,PALM_OIL,A,2025-09-09
+SME-10100,Company 101 Corp,Chemicals & Plastics,STEEL,A,2025-10-31
+SME-10101,Company 102 Corp,Textile & Apparel,RUBBER,C,2025-06-25
+SME-10102,Company 103 Corp,Chemicals & Plastics,PALM_OIL,A,2025-12-27
+SME-10103,Company 104 Corp,Electronics Manufacturing,RUBBER,A,2025-10-28
+SME-10104,Company 105 Corp,Textile & Apparel,STEEL,A,2026-02-26
+SME-10105,Company 106 Corp,Food Processing,STEEL,A,2025-10-06
+SME-10106,Company 107 Corp,Automotive Parts,RUBBER,A,2026-02-20
+SME-10107,Company 108 Corp,Chemicals & Plastics,COTTON,B,2025-11-06
+SME-10108,Company 109 Corp,Automotive Parts,LITHIUM,B,2026-06-13
+SME-10109,Company 110 Corp,Automotive Parts,COTTON,C,2026-05-22
+SME-10110,Company 111 Corp,Textile & Apparel,COTTON,C,2026-06-10
+SME-10111,Company 112 Corp,Automotive Parts,COTTON,B,2025-05-28
+SME-10112,Company 113 Corp,Food Processing,PALM_OIL,A,2025-11-18
+SME-10113,Company 114 Corp,Automotive Parts,STEEL,B,2025-07-11
+SME-10114,Company 115 Corp,Textile & Apparel,COTTON,B,2025-09-22
+SME-10115,Company 116 Corp,Food Processing,STEEL,A,2026-06-23
+SME-10116,Company 117 Corp,Electronics Manufacturing,RUBBER,B,2026-03-23
+SME-10117,Company 118 Corp,Automotive Parts,LITHIUM,B,2025-11-03
+SME-10118,Company 119 Corp,Textile & Apparel,RUBBER,B,2026-04-05
+SME-10119,Company 120 Corp,Electronics Manufacturing,RUBBER,B,2025-09-06
+SME-10120,Company 121 Corp,Electronics Manufacturing,PALM_OIL,A,2026-06-17
+SME-10121,Company 122 Corp,Chemicals & Plastics,LITHIUM,C,2025-08-01
+SME-10122,Company 123 Corp,Food Processing,RUBBER,B,2026-06-29
+SME-10123,Company 124 Corp,Automotive Parts,RUBBER,A,2025-06-21
+SME-10124,Company 125 Corp,Textile & Apparel,LITHIUM,C,2025-09-11
+SME-10125,Company 126 Corp,Chemicals & Plastics,LITHIUM,B,2025-08-10
+SME-10126,Company 127 Corp,Food Processing,RUBBER,C,2026-05-21
+SME-10127,Company 128 Corp,Chemicals & Plastics,LITHIUM,B,2025-08-17
+SME-10128,Company 129 Corp,Food Processing,RUBBER,B,2025-08-19
+SME-10129,Company 130 Corp,Food Processing,RUBBER,A,2025-06-15
+SME-10130,Company 131 Corp,Automotive Parts,PALM_OIL,A,2026-03-12
+SME-10131,Company 132 Corp,Food Processing,COTTON,B,2026-06-17
+SME-10132,Company 133 Corp,Chemicals & Plastics,RUBBER,B,2025-11-12
+SME-10133,Company 134 Corp,Food Processing,STEEL,A,2026-04-08
+SME-10134,Company 135 Corp,Automotive Parts,COTTON,A,2026-02-21
+SME-10135,Company 136 Corp,Automotive Parts,COTTON,C,2025-11-12
+SME-10136,Company 137 Corp,Chemicals & Plastics,COTTON,C,2025-08-09
+SME-10137,Company 138 Corp,Electronics Manufacturing,PALM_OIL,B,2026-02-06
+SME-10138,Company 139 Corp,Electronics Manufacturing,RUBBER,A,2025-06-17
+SME-10139,Company 140 Corp,Food Processing,PALM_OIL,A,2025-07-21
+SME-10140,Company 141 Corp,Textile & Apparel,RUBBER,A,2026-06-03
+SME-10141,Company 142 Corp,Food Processing,PALM_OIL,C,2026-04-26
+SME-10142,Company 143 Corp,Chemicals & Plastics,PALM_OIL,A,2026-01-19
+SME-10143,Company 144 Corp,Chemicals & Plastics,STEEL,B,2025-11-14
+SME-10144,Company 145 Corp,Chemicals & Plastics,PALM_OIL,A,2025-10-13
+SME-10145,Company 146 Corp,Chemicals & Plastics,LITHIUM,B,2026-01-18
+SME-10146,Company 147 Corp,Chemicals & Plastics,STEEL,B,2025-09-03
+SME-10147,Company 148 Corp,Automotive Parts,PALM_OIL,C,2025-09-01
+SME-10148,Company 149 Corp,Electronics Manufacturing,COTTON,A,2025-09-17
+SME-10149,Company 150 Corp,Chemicals & Plastics,LITHIUM,A,2025-06-01
+SME-10150,Company 151 Corp,Textile & Apparel,LITHIUM,A,2026-06-21
+SME-10151,Company 152 Corp,Textile & Apparel,LITHIUM,C,2025-12-18
+SME-10152,Company 153 Corp,Textile & Apparel,STEEL,C,2026-03-05
+SME-10153,Company 154 Corp,Textile & Apparel,PALM_OIL,B,2025-10-04
+SME-10154,Company 155 Corp,Automotive Parts,PALM_OIL,B,2026-04-12
+SME-10155,Company 156 Corp,Textile & Apparel,COTTON,B,2026-03-30
+SME-10156,Company 157 Corp,Chemicals & Plastics,COTTON,A,2025-10-08
+SME-10157,Company 158 Corp,Food Processing,LITHIUM,C,2025-08-03
+SME-10158,Company 159 Corp,Textile & Apparel,COTTON,B,2025-07-16
+SME-10159,Company 160 Corp,Automotive Parts,STEEL,B,2025-07-05
+SME-10160,Company 161 Corp,Automotive Parts,PALM_OIL,B,2025-10-17
+SME-10161,Company 162 Corp,Textile & Apparel,LITHIUM,A,2026-02-18
+SME-10162,Company 163 Corp,Food Processing,COTTON,A,2025-09-28
+SME-10163,Company 164 Corp,Textile & Apparel,STEEL,B,2025-10-10
+SME-10164,Company 165 Corp,Automotive Parts,STEEL,A,2026-01-11
+SME-10165,Company 166 Corp,Electronics Manufacturing,COTTON,B,2026-06-30
+SME-10166,Company 167 Corp,Chemicals & Plastics,PALM_OIL,A,2025-08-22
+SME-10167,Company 168 Corp,Automotive Parts,COTTON,B,2026-04-28
+SME-10168,Company 169 Corp,Textile & Apparel,LITHIUM,A,2025-06-22
+SME-10169,Company 170 Corp,Chemicals & Plastics,COTTON,B,2025-09-20
+SME-10170,Company 171 Corp,Textile & Apparel,STEEL,B,2026-03-02
+SME-10171,Company 172 Corp,Textile & Apparel,COTTON,A,2026-03-16
+SME-10172,Company 173 Corp,Electronics Manufacturing,PALM_OIL,B,2026-01-07
+SME-10173,Company 174 Corp,Chemicals & Plastics,RUBBER,B,2025-12-09
+SME-10174,Company 175 Corp,Chemicals & Plastics,COTTON,B,2026-01-17
+SME-10175,Company 176 Corp,Electronics Manufacturing,PALM_OIL,C,2025-08-30
+SME-10176,Company 177 Corp,Automotive Parts,PALM_OIL,B,2026-03-03
+SME-10177,Company 178 Corp,Textile & Apparel,STEEL,A,2026-05-18
+SME-10178,Company 179 Corp,Food Processing,PALM_OIL,A,2025-08-23
+SME-10179,Company 180 Corp,Textile & Apparel,PALM_OIL,A,2026-01-26
+SME-10180,Company 181 Corp,Textile & Apparel,PALM_OIL,B,2025-06-29
+SME-10181,Company 182 Corp,Automotive Parts,PALM_OIL,A,2025-12-06
+SME-10182,Company 183 Corp,Textile & Apparel,LITHIUM,B,2025-06-06
+SME-10183,Company 184 Corp,Electronics Manufacturing,LITHIUM,B,2026-03-15
+SME-10184,Company 185 Corp,Electronics Manufacturing,STEEL,B,2025-10-23
+SME-10185,Company 186 Corp,Chemicals & Plastics,COTTON,B,2025-06-26
+SME-10186,Company 187 Corp,Food Processing,PALM_OIL,A,2025-08-01
+SME-10187,Company 188 Corp,Textile & Apparel,COTTON,A,2026-02-21
+SME-10188,Company 189 Corp,Textile & Apparel,COTTON,B,2025-09-11
+SME-10189,Company 190 Corp,Automotive Parts,STEEL,B,2026-06-11
+SME-10190,Company 191 Corp,Electronics Manufacturing,PALM_OIL,B,2025-09-22
+SME-10191,Company 192 Corp,Food Processing,PALM_OIL,B,2025-09-19
+SME-10192,Company 193 Corp,Chemicals & Plastics,RUBBER,A,2026-06-30
+SME-10193,Company 194 Corp,Electronics Manufacturing,COTTON,C,2026-03-04
+SME-10194,Company 195 Corp,Chemicals & Plastics,COTTON,B,2026-05-27
+SME-10195,Company 196 Corp,Automotive Parts,LITHIUM,B,2025-12-15
+SME-10196,Company 197 Corp,Automotive Parts,RUBBER,A,2025-10-29
+SME-10197,Company 198 Corp,Textile & Apparel,LITHIUM,B,2026-05-03
+SME-10198,Company 199 Corp,Food Processing,LITHIUM,B,2025-08-10
+SME-10199,Company 200 Corp,Chemicals & Plastics,LITHIUM,A,2026-01-21
+SME-10200,Company 201 Corp,Electronics Manufacturing,STEEL,C,2026-01-03
+SME-10201,Company 202 Corp,Automotive Parts,STEEL,A,2025-12-07
+SME-10202,Company 203 Corp,Textile & Apparel,LITHIUM,C,2026-06-19
+SME-10203,Company 204 Corp,Textile & Apparel,RUBBER,B,2025-09-28
+SME-10204,Company 205 Corp,Chemicals & Plastics,COTTON,A,2026-01-01
+SME-10205,Company 206 Corp,Automotive Parts,RUBBER,B,2025-11-01
+SME-10206,Company 207 Corp,Food Processing,PALM_OIL,C,2025-11-27
+SME-10207,Company 208 Corp,Automotive Parts,STEEL,B,2025-10-23
+SME-10208,Company 209 Corp,Chemicals & Plastics,COTTON,C,2025-09-05
+SME-10209,Company 210 Corp,Chemicals & Plastics,COTTON,B,2026-02-25
+SME-10210,Company 211 Corp,Automotive Parts,PALM_OIL,B,2025-11-26
+SME-10211,Company 212 Corp,Chemicals & Plastics,PALM_OIL,C,2025-08-29
+SME-10212,Company 213 Corp,Automotive Parts,LITHIUM,A,2025-09-19
+SME-10213,Company 214 Corp,Electronics Manufacturing,STEEL,B,2025-12-28
+SME-10214,Company 215 Corp,Automotive Parts,STEEL,A,2026-05-23
+SME-10215,Company 216 Corp,Automotive Parts,RUBBER,C,2025-11-20
+SME-10216,Company 217 Corp,Chemicals & Plastics,LITHIUM,C,2025-12-29
+SME-10217,Company 218 Corp,Chemicals & Plastics,LITHIUM,A,2026-01-04
+SME-10218,Company 219 Corp,Textile & Apparel,LITHIUM,B,2025-09-10
+SME-10219,Company 220 Corp,Textile & Apparel,LITHIUM,C,2025-07-26
+SME-10220,Company 221 Corp,Electronics Manufacturing,STEEL,A,2026-01-31
+SME-10221,Company 222 Corp,Textile & Apparel,STEEL,B,2025-06-12
+SME-10222,Company 223 Corp,Automotive Parts,LITHIUM,C,2026-02-25
+SME-10223,Company 224 Corp,Chemicals & Plastics,RUBBER,A,2025-09-03
+SME-10224,Company 225 Corp,Textile & Apparel,COTTON,B,2025-08-27
+SME-10225,Company 226 Corp,Textile & Apparel,COTTON,A,2025-07-30
+SME-10226,Company 227 Corp,Electronics Manufacturing,RUBBER,C,2025-11-09
+SME-10227,Company 228 Corp,Electronics Manufacturing,LITHIUM,C,2025-06-16
+SME-10228,Company 229 Corp,Automotive Parts,STEEL,C,2025-06-21
+SME-10229,Company 230 Corp,Chemicals & Plastics,COTTON,B,2026-06-23
+SME-10230,Company 231 Corp,Electronics Manufacturing,PALM_OIL,C,2025-07-25
+SME-10231,Company 232 Corp,Textile & Apparel,PALM_OIL,C,2026-02-22
+SME-10232,Company 233 Corp,Chemicals & Plastics,RUBBER,B,2025-10-10
+SME-10233,Company 234 Corp,Chemicals & Plastics,LITHIUM,C,2026-01-25
+SME-10234,Company 235 Corp,Textile & Apparel,COTTON,A,2025-07-14
+SME-10235,Company 236 Corp,Electronics Manufacturing,LITHIUM,B,2025-07-08
+SME-10236,Company 237 Corp,Textile & Apparel,COTTON,A,2026-06-26
+SME-10237,Company 238 Corp,Chemicals & Plastics,RUBBER,A,2026-04-06
+SME-10238,Company 239 Corp,Food Processing,RUBBER,A,2026-01-07
+SME-10239,Company 240 Corp,Food Processing,PALM_OIL,B,2025-09-14
+SME-10240,Company 241 Corp,Automotive Parts,LITHIUM,B,2025-12-20
+SME-10241,Company 242 Corp,Textile & Apparel,PALM_OIL,B,2025-08-24
+SME-10242,Company 243 Corp,Textile & Apparel,LITHIUM,A,2026-03-04
+SME-10243,Company 244 Corp,Automotive Parts,PALM_OIL,B,2025-11-25
+SME-10244,Company 245 Corp,Automotive Parts,STEEL,B,2026-03-09
+SME-10245,Company 246 Corp,Automotive Parts,STEEL,B,2026-02-06
+SME-10246,Company 247 Corp,Chemicals & Plastics,STEEL,B,2026-06-05
+SME-10247,Company 248 Corp,Textile & Apparel,STEEL,B,2026-02-15
+SME-10248,Company 249 Corp,Chemicals & Plastics,COTTON,C,2025-09-01
+SME-10249,Company 250 Corp,Automotive Parts,STEEL,B,2025-11-11
+SME-10250,Company 251 Corp,Textile & Apparel,RUBBER,A,2025-06-27
+SME-10251,Company 252 Corp,Chemicals & Plastics,RUBBER,A,2026-04-16
+SME-10252,Company 253 Corp,Chemicals & Plastics,COTTON,C,2025-08-07
+SME-10253,Company 254 Corp,Automotive Parts,STEEL,A,2025-07-21
+SME-10254,Company 255 Corp,Textile & Apparel,STEEL,C,2025-09-02
+SME-10255,Company 256 Corp,Automotive Parts,STEEL,B,2025-09-15
+SME-10256,Company 257 Corp,Textile & Apparel,PALM_OIL,C,2026-06-30
+SME-10257,Company 258 Corp,Food Processing,LITHIUM,B,2026-02-04
+SME-10258,Company 259 Corp,Electronics Manufacturing,PALM_OIL,C,2025-09-17
+SME-10259,Company 260 Corp,Electronics Manufacturing,LITHIUM,B,2026-02-09
+SME-10260,Company 261 Corp,Electronics Manufacturing,STEEL,B,2026-05-09
+SME-10261,Company 262 Corp,Automotive Parts,STEEL,B,2025-08-31
+SME-10262,Company 263 Corp,Food Processing,PALM_OIL,B,2026-04-23
+SME-10263,Company 264 Corp,Textile & Apparel,PALM_OIL,B,2025-07-05
+SME-10264,Company 265 Corp,Chemicals & Plastics,LITHIUM,C,2026-04-02
+SME-10265,Company 266 Corp,Textile & Apparel,RUBBER,C,2025-11-23
+SME-10266,Company 267 Corp,Chemicals & Plastics,LITHIUM,B,2025-12-21
+SME-10267,Company 268 Corp,Textile & Apparel,PALM_OIL,B,2026-04-29
+SME-10268,Company 269 Corp,Food Processing,PALM_OIL,B,2026-04-19
+SME-10269,Company 270 Corp,Chemicals & Plastics,COTTON,B,2026-01-21
+SME-10270,Company 271 Corp,Automotive Parts,PALM_OIL,A,2026-01-13
+SME-10271,Company 272 Corp,Textile & Apparel,COTTON,A,2026-04-03
+SME-10272,Company 273 Corp,Textile & Apparel,RUBBER,B,2026-01-06
+SME-10273,Company 274 Corp,Chemicals & Plastics,LITHIUM,A,2025-10-05
+SME-10274,Company 275 Corp,Automotive Parts,LITHIUM,A,2026-04-19
+SME-10275,Company 276 Corp,Automotive Parts,COTTON,A,2025-10-29
+SME-10276,Company 277 Corp,Food Processing,LITHIUM,A,2026-04-15
+SME-10277,Company 278 Corp,Automotive Parts,PALM_OIL,A,2026-01-23
+SME-10278,Company 279 Corp,Automotive Parts,STEEL,C,2025-08-11
+SME-10279,Company 280 Corp,Automotive Parts,COTTON,B,2026-03-25
+SME-10280,Company 281 Corp,Electronics Manufacturing,LITHIUM,B,2025-06-15
+SME-10281,Company 282 Corp,Food Processing,COTTON,B,2026-03-21
+SME-10282,Company 283 Corp,Textile & Apparel,COTTON,A,2026-02-19
+SME-10283,Company 284 Corp,Chemicals & Plastics,STEEL,C,2026-03-21
+SME-10284,Company 285 Corp,Textile & Apparel,PALM_OIL,B,2026-06-12
+SME-10285,Company 286 Corp,Food Processing,COTTON,A,2026-04-10
+SME-10286,Company 287 Corp,Chemicals & Plastics,LITHIUM,B,2025-05-30
+SME-10287,Company 288 Corp,Food Processing,RUBBER,C,2025-09-25
+SME-10288,Company 289 Corp,Automotive Parts,COTTON,C,2025-07-27
+SME-10289,Company 290 Corp,Chemicals & Plastics,COTTON,B,2025-07-01
+SME-10290,Company 291 Corp,Automotive Parts,STEEL,B,2025-08-04
+SME-10291,Company 292 Corp,Textile & Apparel,PALM_OIL,A,2026-02-22
+SME-10292,Company 293 Corp,Textile & Apparel,RUBBER,C,2025-07-22
+SME-10293,Company 294 Corp,Chemicals & Plastics,LITHIUM,A,2025-08-25
+SME-10294,Company 295 Corp,Chemicals & Plastics,RUBBER,C,2026-04-03
+SME-10295,Company 296 Corp,Food Processing,LITHIUM,B,2025-11-30
+SME-10296,Company 297 Corp,Food Processing,PALM_OIL,B,2026-02-08
+SME-10297,Company 298 Corp,Automotive Parts,LITHIUM,B,2026-04-27
+SME-10298,Company 299 Corp,Chemicals & Plastics,STEEL,A,2026-04-16
+SME-10299,Company 300 Corp,Textile & Apparel,STEEL,A,2025-12-14
+SME-10300,Company 301 Corp,Food Processing,STEEL,A,2026-02-08
+SME-10301,Company 302 Corp,Food Processing,STEEL,A,2025-08-19
+SME-10302,Company 303 Corp,Textile & Apparel,RUBBER,B,2026-03-30
+SME-10303,Company 304 Corp,Food Processing,PALM_OIL,B,2025-08-30
+SME-10304,Company 305 Corp,Automotive Parts,LITHIUM,A,2025-11-19
+SME-10305,Company 306 Corp,Chemicals & Plastics,LITHIUM,C,2025-09-13
+SME-10306,Company 307 Corp,Textile & Apparel,STEEL,C,2026-03-21
+SME-10307,Company 308 Corp,Chemicals & Plastics,STEEL,C,2025-10-07
+SME-10308,Company 309 Corp,Food Processing,COTTON,C,2025-07-11
+SME-10309,Company 310 Corp,Food Processing,PALM_OIL,A,2026-03-13
+SME-10310,Company 311 Corp,Textile & Apparel,RUBBER,B,2025-08-05
+SME-10311,Company 312 Corp,Automotive Parts,LITHIUM,B,2025-10-09
+SME-10312,Company 313 Corp,Electronics Manufacturing,COTTON,B,2026-06-28
+SME-10313,Company 314 Corp,Textile & Apparel,COTTON,A,2026-04-07
+SME-10314,Company 315 Corp,Electronics Manufacturing,LITHIUM,C,2025-09-22
+SME-10315,Company 316 Corp,Electronics Manufacturing,RUBBER,A,2025-08-07
+SME-10316,Company 317 Corp,Automotive Parts,COTTON,A,2025-08-31
+SME-10317,Company 318 Corp,Electronics Manufacturing,COTTON,B,2026-03-06
+SME-10318,Company 319 Corp,Electronics Manufacturing,PALM_OIL,B,2025-11-22
+SME-10319,Company 320 Corp,Automotive Parts,RUBBER,B,2026-01-28
+SME-10320,Company 321 Corp,Electronics Manufacturing,COTTON,A,2026-01-29
+SME-10321,Company 322 Corp,Electronics Manufacturing,RUBBER,C,2026-06-19
+SME-10322,Company 323 Corp,Electronics Manufacturing,LITHIUM,A,2026-02-18
+SME-10323,Company 324 Corp,Textile & Apparel,STEEL,A,2025-08-31
+SME-10324,Company 325 Corp,Textile & Apparel,COTTON,C,2025-09-11
+SME-10325,Company 326 Corp,Textile & Apparel,PALM_OIL,C,2025-09-04
+SME-10326,Company 327 Corp,Automotive Parts,LITHIUM,C,2025-11-15
+SME-10327,Company 328 Corp,Food Processing,RUBBER,C,2025-10-03
+SME-10328,Company 329 Corp,Electronics Manufacturing,LITHIUM,B,2026-05-19
+SME-10329,Company 330 Corp,Electronics Manufacturing,COTTON,B,2025-07-23
+SME-10330,Company 331 Corp,Automotive Parts,RUBBER,A,2025-08-09
+SME-10331,Company 332 Corp,Electronics Manufacturing,STEEL,B,2025-09-02
+SME-10332,Company 333 Corp,Textile & Apparel,LITHIUM,B,2025-07-02
+SME-10333,Company 334 Corp,Food Processing,COTTON,A,2025-06-17
+SME-10334,Company 335 Corp,Chemicals & Plastics,PALM_OIL,B,2026-06-10
+SME-10335,Company 336 Corp,Electronics Manufacturing,RUBBER,B,2026-03-16
+SME-10336,Company 337 Corp,Textile & Apparel,LITHIUM,A,2025-07-30
+SME-10337,Company 338 Corp,Chemicals & Plastics,LITHIUM,A,2025-09-01
+SME-10338,Company 339 Corp,Food Processing,STEEL,B,2026-03-06
+SME-10339,Company 340 Corp,Chemicals & Plastics,STEEL,A,2026-02-27
+SME-10340,Company 341 Corp,Textile & Apparel,PALM_OIL,C,2025-05-28
+SME-10341,Company 342 Corp,Chemicals & Plastics,PALM_OIL,B,2025-09-23
+SME-10342,Company 343 Corp,Automotive Parts,COTTON,B,2025-09-12
+SME-10343,Company 344 Corp,Chemicals & Plastics,COTTON,B,2025-12-10
+SME-10344,Company 345 Corp,Electronics Manufacturing,PALM_OIL,C,2026-05-11
+SME-10345,Company 346 Corp,Electronics Manufacturing,PALM_OIL,B,2025-10-03
+SME-10346,Company 347 Corp,Automotive Parts,RUBBER,B,2025-08-11
+SME-10347,Company 348 Corp,Textile & Apparel,STEEL,B,2025-09-27
+SME-10348,Company 349 Corp,Electronics Manufacturing,COTTON,A,2026-02-10
+SME-10349,Company 350 Corp,Food Processing,STEEL,C,2025-09-29
+SME-10350,Company 351 Corp,Electronics Manufacturing,STEEL,B,2025-09-14
+SME-10351,Company 352 Corp,Electronics Manufacturing,PALM_OIL,B,2025-08-01
+SME-10352,Company 353 Corp,Textile & Apparel,RUBBER,C,2025-06-15
+SME-10353,Company 354 Corp,Chemicals & Plastics,LITHIUM,C,2025-06-23
+SME-10354,Company 355 Corp,Electronics Manufacturing,RUBBER,B,2026-05-10
+SME-10355,Company 356 Corp,Automotive Parts,RUBBER,C,2026-06-04
+SME-10356,Company 357 Corp,Chemicals & Plastics,STEEL,B,2026-01-25
+SME-10357,Company 358 Corp,Food Processing,RUBBER,B,2025-11-04
+SME-10358,Company 359 Corp,Textile & Apparel,COTTON,B,2026-01-26
+SME-10359,Company 360 Corp,Food Processing,STEEL,B,2025-09-13
+SME-10360,Company 361 Corp,Chemicals & Plastics,COTTON,A,2026-02-15
+SME-10361,Company 362 Corp,Chemicals & Plastics,LITHIUM,C,2026-02-07
+SME-10362,Company 363 Corp,Chemicals & Plastics,STEEL,C,2026-03-17
+SME-10363,Company 364 Corp,Food Processing,LITHIUM,A,2026-01-24
+SME-10364,Company 365 Corp,Chemicals & Plastics,STEEL,C,2026-02-05
+SME-10365,Company 366 Corp,Food Processing,PALM_OIL,A,2026-06-29
+SME-10366,Company 367 Corp,Chemicals & Plastics,RUBBER,B,2026-04-15
+SME-10367,Company 368 Corp,Automotive Parts,PALM_OIL,B,2026-02-19
+SME-10368,Company 369 Corp,Chemicals & Plastics,LITHIUM,A,2026-04-02
+SME-10369,Company 370 Corp,Food Processing,RUBBER,C,2025-07-21
+SME-10370,Company 371 Corp,Electronics Manufacturing,STEEL,C,2025-07-16
+SME-10371,Company 372 Corp,Chemicals & Plastics,RUBBER,B,2025-10-11
+SME-10372,Company 373 Corp,Electronics Manufacturing,COTTON,A,2025-07-15
+SME-10373,Company 374 Corp,Automotive Parts,RUBBER,A,2026-03-15
+SME-10374,Company 375 Corp,Textile & Apparel,COTTON,B,2026-04-18
+SME-10375,Company 376 Corp,Automotive Parts,RUBBER,C,2026-05-23
+SME-10376,Company 377 Corp,Chemicals & Plastics,COTTON,B,2025-05-30
+SME-10377,Company 378 Corp,Electronics Manufacturing,LITHIUM,A,2026-01-23
+SME-10378,Company 379 Corp,Electronics Manufacturing,PALM_OIL,B,2026-04-21
+SME-10379,Company 380 Corp,Food Processing,STEEL,B,2025-08-23
+SME-10380,Company 381 Corp,Electronics Manufacturing,RUBBER,B,2025-11-02
+SME-10381,Company 382 Corp,Food Processing,PALM_OIL,A,2025-09-06
+SME-10382,Company 383 Corp,Textile & Apparel,STEEL,B,2026-05-26
+SME-10383,Company 384 Corp,Chemicals & Plastics,STEEL,B,2026-04-08
+SME-10384,Company 385 Corp,Food Processing,COTTON,C,2025-06-22
+SME-10385,Company 386 Corp,Textile & Apparel,LITHIUM,B,2025-10-11
+SME-10386,Company 387 Corp,Electronics Manufacturing,LITHIUM,B,2025-08-25
+SME-10387,Company 388 Corp,Electronics Manufacturing,PALM_OIL,C,2025-06-11
+SME-10388,Company 389 Corp,Textile & Apparel,LITHIUM,A,2026-01-10
+SME-10389,Company 390 Corp,Electronics Manufacturing,RUBBER,C,2025-06-20
+SME-10390,Company 391 Corp,Textile & Apparel,LITHIUM,B,2026-01-09
+SME-10391,Company 392 Corp,Food Processing,PALM_OIL,A,2025-07-04
+SME-10392,Company 393 Corp,Food Processing,LITHIUM,B,2026-05-15
+SME-10393,Company 394 Corp,Textile & Apparel,RUBBER,B,2025-06-17
+SME-10394,Company 395 Corp,Food Processing,COTTON,A,2026-02-10
+SME-10395,Company 396 Corp,Food Processing,PALM_OIL,B,2025-06-21
+SME-10396,Company 397 Corp,Food Processing,COTTON,B,2026-03-05
+SME-10397,Company 398 Corp,Automotive Parts,COTTON,B,2025-09-27
+SME-10398,Company 399 Corp,Chemicals & Plastics,COTTON,A,2025-11-29
+SME-10399,Company 400 Corp,Electronics Manufacturing,STEEL,C,2025-11-23
+SME-10400,Company 401 Corp,Automotive Parts,STEEL,C,2025-06-03
+SME-10401,Company 402 Corp,Food Processing,COTTON,C,2026-06-05
+SME-10402,Company 403 Corp,Textile & Apparel,PALM_OIL,B,2026-06-22
+SME-10403,Company 404 Corp,Food Processing,RUBBER,A,2025-10-03
+SME-10404,Company 405 Corp,Chemicals & Plastics,RUBBER,B,2026-06-21
+SME-10405,Company 406 Corp,Food Processing,LITHIUM,A,2025-06-18
+SME-10406,Company 407 Corp,Textile & Apparel,PALM_OIL,A,2026-03-02
+SME-10407,Company 408 Corp,Chemicals & Plastics,STEEL,B,2026-02-26
+SME-10408,Company 409 Corp,Food Processing,COTTON,B,2026-01-12
+SME-10409,Company 410 Corp,Chemicals & Plastics,LITHIUM,B,2026-04-20
+SME-10410,Company 411 Corp,Electronics Manufacturing,RUBBER,B,2026-01-30
+SME-10411,Company 412 Corp,Electronics Manufacturing,STEEL,B,2025-12-05
+SME-10412,Company 413 Corp,Food Processing,STEEL,A,2026-05-13
+SME-10413,Company 414 Corp,Chemicals & Plastics,COTTON,C,2026-01-28
+SME-10414,Company 415 Corp,Textile & Apparel,RUBBER,B,2025-07-19
+SME-10415,Company 416 Corp,Food Processing,PALM_OIL,B,2025-09-11
+SME-10416,Company 417 Corp,Electronics Manufacturing,STEEL,A,2026-04-24
+SME-10417,Company 418 Corp,Electronics Manufacturing,COTTON,B,2026-05-12
+SME-10418,Company 419 Corp,Food Processing,PALM_OIL,B,2026-01-30
+SME-10419,Company 420 Corp,Chemicals & Plastics,RUBBER,A,2026-06-12
+SME-10420,Company 421 Corp,Electronics Manufacturing,STEEL,A,2026-03-23
+SME-10421,Company 422 Corp,Chemicals & Plastics,PALM_OIL,B,2026-05-02
+SME-10422,Company 423 Corp,Electronics Manufacturing,PALM_OIL,B,2026-01-15
+SME-10423,Company 424 Corp,Electronics Manufacturing,PALM_OIL,A,2025-12-11
+SME-10424,Company 425 Corp,Automotive Parts,STEEL,C,2025-07-21
+SME-10425,Company 426 Corp,Electronics Manufacturing,STEEL,A,2026-02-05
+SME-10426,Company 427 Corp,Textile & Apparel,LITHIUM,B,2026-01-18
+SME-10427,Company 428 Corp,Food Processing,RUBBER,C,2025-11-01
+SME-10428,Company 429 Corp,Food Processing,COTTON,B,2026-04-23
+SME-10429,Company 430 Corp,Chemicals & Plastics,PALM_OIL,B,2026-01-07
+SME-10430,Company 431 Corp,Electronics Manufacturing,LITHIUM,B,2026-05-13
+SME-10431,Company 432 Corp,Textile & Apparel,COTTON,A,2026-03-15
+SME-10432,Company 433 Corp,Chemicals & Plastics,LITHIUM,C,2025-11-17
+SME-10433,Company 434 Corp,Automotive Parts,STEEL,B,2026-01-21
+SME-10434,Company 435 Corp,Chemicals & Plastics,PALM_OIL,C,2026-03-04
+SME-10435,Company 436 Corp,Chemicals & Plastics,COTTON,A,2026-02-02
+SME-10436,Company 437 Corp,Electronics Manufacturing,COTTON,A,2026-02-01
+SME-10437,Company 438 Corp,Automotive Parts,COTTON,A,2025-09-11
+SME-10438,Company 439 Corp,Chemicals & Plastics,COTTON,B,2026-02-08
+SME-10439,Company 440 Corp,Textile & Apparel,COTTON,B,2026-01-22
+SME-10440,Company 441 Corp,Textile & Apparel,LITHIUM,C,2026-06-20
+SME-10441,Company 442 Corp,Food Processing,PALM_OIL,B,2026-02-13
+SME-10442,Company 443 Corp,Automotive Parts,STEEL,C,2026-04-14
+SME-10443,Company 444 Corp,Automotive Parts,STEEL,A,2026-04-15
+SME-10444,Company 445 Corp,Food Processing,STEEL,C,2025-10-20
+SME-10445,Company 446 Corp,Chemicals & Plastics,STEEL,B,2025-10-16
+SME-10446,Company 447 Corp,Automotive Parts,LITHIUM,B,2025-08-15
+SME-10447,Company 448 Corp,Textile & Apparel,RUBBER,C,2025-09-13
+SME-10448,Company 449 Corp,Textile & Apparel,PALM_OIL,B,2025-10-11
+SME-10449,Company 450 Corp,Electronics Manufacturing,COTTON,B,2026-04-07
+SME-10450,Company 451 Corp,Automotive Parts,RUBBER,A,2026-02-05
+SME-10451,Company 452 Corp,Chemicals & Plastics,STEEL,A,2025-08-12
+SME-10452,Company 453 Corp,Food Processing,RUBBER,C,2026-05-20
+SME-10453,Company 454 Corp,Food Processing,PALM_OIL,B,2025-06-22
+SME-10454,Company 455 Corp,Chemicals & Plastics,COTTON,B,2026-02-26
+SME-10455,Company 456 Corp,Electronics Manufacturing,COTTON,B,2026-01-15
+SME-10456,Company 457 Corp,Food Processing,PALM_OIL,A,2025-11-02
+SME-10457,Company 458 Corp,Automotive Parts,PALM_OIL,A,2025-09-24
+SME-10458,Company 459 Corp,Electronics Manufacturing,STEEL,B,2025-12-25
+SME-10459,Company 460 Corp,Automotive Parts,COTTON,B,2025-09-02
+SME-10460,Company 461 Corp,Textile & Apparel,RUBBER,A,2026-06-12
+SME-10461,Company 462 Corp,Electronics Manufacturing,LITHIUM,B,2026-04-24
+SME-10462,Company 463 Corp,Food Processing,LITHIUM,A,2025-11-25
+SME-10463,Company 464 Corp,Electronics Manufacturing,PALM_OIL,B,2026-03-21
+SME-10464,Company 465 Corp,Electronics Manufacturing,STEEL,A,2026-05-20
+SME-10465,Company 466 Corp,Electronics Manufacturing,LITHIUM,B,2025-09-16
+SME-10466,Company 467 Corp,Electronics Manufacturing,COTTON,B,2026-01-15
+SME-10467,Company 468 Corp,Automotive Parts,PALM_OIL,B,2026-03-14
+SME-10468,Company 469 Corp,Textile & Apparel,RUBBER,A,2026-05-26
+SME-10469,Company 470 Corp,Chemicals & Plastics,PALM_OIL,A,2025-11-11
+SME-10470,Company 471 Corp,Electronics Manufacturing,RUBBER,B,2025-11-14
+SME-10471,Company 472 Corp,Food Processing,PALM_OIL,B,2025-07-13
+SME-10472,Company 473 Corp,Electronics Manufacturing,PALM_OIL,B,2026-01-18
+SME-10473,Company 474 Corp,Food Processing,PALM_OIL,A,2025-06-09
+SME-10474,Company 475 Corp,Automotive Parts,RUBBER,B,2026-04-19
+SME-10475,Company 476 Corp,Food Processing,RUBBER,C,2026-02-15
+SME-10476,Company 477 Corp,Chemicals & Plastics,PALM_OIL,B,2025-07-13
+SME-10477,Company 478 Corp,Textile & Apparel,LITHIUM,A,2025-06-17
+SME-10478,Company 479 Corp,Food Processing,STEEL,B,2026-04-22
+SME-10479,Company 480 Corp,Food Processing,STEEL,A,2025-12-17
+SME-10480,Company 481 Corp,Textile & Apparel,STEEL,A,2025-10-05
+SME-10481,Company 482 Corp,Chemicals & Plastics,RUBBER,C,2026-05-13
+SME-10482,Company 483 Corp,Electronics Manufacturing,RUBBER,A,2025-08-19
+SME-10483,Company 484 Corp,Food Processing,LITHIUM,B,2026-02-21
+SME-10484,Company 485 Corp,Textile & Apparel,STEEL,B,2026-06-26
+SME-10485,Company 486 Corp,Automotive Parts,STEEL,B,2026-06-04
+SME-10486,Company 487 Corp,Textile & Apparel,PALM_OIL,B,2026-01-22
+SME-10487,Company 488 Corp,Automotive Parts,RUBBER,A,2026-02-02
+SME-10488,Company 489 Corp,Chemicals & Plastics,STEEL,B,2025-10-10
+SME-10489,Company 490 Corp,Electronics Manufacturing,LITHIUM,B,2025-11-13
+SME-10490,Company 491 Corp,Textile & Apparel,LITHIUM,A,2025-12-13
+SME-10491,Company 492 Corp,Food Processing,STEEL,B,2026-05-12
+SME-10492,Company 493 Corp,Chemicals & Plastics,RUBBER,A,2026-04-25
+SME-10493,Company 494 Corp,Textile & Apparel,LITHIUM,A,2025-09-04
+SME-10494,Company 495 Corp,Food Processing,PALM_OIL,B,2025-06-15
+SME-10495,Company 496 Corp,Textile & Apparel,LITHIUM,A,2026-05-04
+SME-10496,Company 497 Corp,Automotive Parts,COTTON,B,2025-10-15
+SME-10497,Company 498 Corp,Textile & Apparel,COTTON,B,2025-07-24
+SME-10498,Company 499 Corp,Textile & Apparel,RUBBER,C,2025-08-09
+SME-10499,Company 500 Corp,Textile & Apparel,STEEL,A,2026-02-21

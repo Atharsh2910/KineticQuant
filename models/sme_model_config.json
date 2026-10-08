@@ -1,0 +1,6 @@
+{
+  "input_dim": 16,
+  "problem_type": "classification",
+  "num_classes": 3,
+  "target_column": "risk_tier"
+}

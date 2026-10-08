@@ -1,0 +1,36 @@
+{
+  "dataset_directory": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset",
+  "files": {
+    "financial_ledgers": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset/financial_ledgers.csv",
+    "inventory_procurement": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset/inventory_procurement.csv",
+    "market_time_series": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset/market_time_series.csv",
+    "news_sentiment_feed": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset/news_sentiment_feed.csv",
+    "sme_parametric_financing_training": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset/sme_parametric_financing_training.csv",
+    "sme_profiles": "/kaggle/input/datasets/atharshsu/kinetic-quant-dataset/sme_profiles.csv"
+  },
+  "sme": {
+    "target_column": "risk_tier",
+    "problem_type": "classification",
+    "num_features": 16,
+    "train_rows": 4000,
+    "validation_rows": 1000
+  },
+  "market": {
+    "date_column": "timestamp",
+    "value_column": "price",
+    "sarimax_order": [
+      1,
+      1,
+      1
+    ],
+    "sarimax_seasonal_order": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "train_rows": 20,
+    "test_rows": 10
+  },
+  "device": "cpu"
+}
