@@ -74,8 +74,6 @@ export default function Settings({ session }) {
                 <label className="block text-sm font-medium text-zinc-400 mb-1.5">Default Currency</label>
                 <select className="w-full bg-zinc-900/50 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-orange-500/50 appearance-none">
                   <option value="INR">INR (Rs.)</option>
-                  <option value="USD">USD ($)</option>
-                  <option value="EUR">EUR (€)</option>
                 </select>
               </div>
             </div>

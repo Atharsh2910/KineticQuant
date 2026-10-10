@@ -272,16 +272,16 @@ export default function SMEDetail({ session }) {
                         {new Date(l.recorded_at).toLocaleDateString()}
                       </td>
                       <td className="px-6 py-4 font-mono text-right text-emerald-400">
-                        ${parseFloat(l.cash_on_hand).toLocaleString(undefined, {minimumFractionDigits: 2})}
+                        Rs. {parseFloat(l.cash_on_hand).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
                       <td className="px-6 py-4 font-mono text-right text-orange-400">
-                        ${parseFloat(l.accounts_receivable).toLocaleString(undefined, {minimumFractionDigits: 2})}
+                        Rs. {parseFloat(l.accounts_receivable).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
                       <td className="px-6 py-4 font-mono text-right text-red-400">
-                        ${parseFloat(l.accounts_payable).toLocaleString(undefined, {minimumFractionDigits: 2})}
+                        Rs. {parseFloat(l.accounts_payable).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
                       <td className="px-6 py-4 font-mono text-right text-zinc-400">
-                        ${parseFloat(l.inventory_holding_costs).toLocaleString(undefined, {minimumFractionDigits: 2})}
+                        Rs. {parseFloat(l.inventory_holding_costs).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
                     </tr>
                   ))}
