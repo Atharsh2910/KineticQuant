@@ -37,7 +37,7 @@ class GroqService:
                         "content": prompt
                     }
                 ],
-                model="openai/gpt-oss-20b",
+                model="mixtral-8x7b-32768",
                 temperature=0.0,
                 response_format={"type": "json_object"}
             )

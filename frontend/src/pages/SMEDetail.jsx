@@ -8,6 +8,13 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { motion } from 'framer-motion'
 import { cn } from '../utils/cn'
 
+import PriceHedgePanel from '../components/features/PriceHedgePanel'
+import CapitalDrawdownPanel from '../components/features/CapitalDrawdownPanel'
+import VendorArbitragePanel from '../components/features/VendorArbitragePanel'
+import DiscountEnginePanel from '../components/features/DiscountEnginePanel'
+import CreditPassportPanel from '../components/features/CreditPassportPanel'
+
+
 export default function SMEDetail({ session }) {
   const { id } = useParams()
   const [sme, setSme] = useState(null)
@@ -212,20 +219,36 @@ export default function SMEDetail({ session }) {
 
       {/* Tabs */}
       <div className="glass-panel rounded-xl overflow-hidden">
-        <div className="flex border-b border-white/5 bg-slate-900/50">
+        <div className="flex border-b border-white/5 bg-slate-900/50 overflow-x-auto hide-scrollbar">
           <button 
             onClick={() => setActiveTab('overview')}
-            className={cn("px-6 py-4 text-sm font-medium transition-colors relative", activeTab === 'overview' ? "text-white" : "text-slate-400 hover:text-white")}
+            className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'overview' ? "text-white" : "text-slate-400 hover:text-white")}
           >
             Ledger History
             {activeTab === 'overview' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />}
           </button>
           <button 
             onClick={() => setActiveTab('cot')}
-            className={cn("px-6 py-4 text-sm font-medium transition-colors relative", activeTab === 'cot' ? "text-white" : "text-slate-400 hover:text-white")}
+            className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'cot' ? "text-white" : "text-slate-400 hover:text-white")}
           >
             Chain of Thought (CoT) Logs
             {activeTab === 'cot' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />}
+          </button>
+          
+          <button onClick={() => setActiveTab('hedge')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'hedge' ? "text-white" : "text-slate-400 hover:text-white")}>
+            Pricing Hedge {activeTab === 'hedge' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-500" />}
+          </button>
+          <button onClick={() => setActiveTab('capital')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'capital' ? "text-white" : "text-slate-400 hover:text-white")}>
+            JIT Capital {activeTab === 'capital' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />}
+          </button>
+          <button onClick={() => setActiveTab('arbitrage')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'arbitrage' ? "text-white" : "text-slate-400 hover:text-white")}>
+            Vendor Arbitrage {activeTab === 'arbitrage' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-500" />}
+          </button>
+          <button onClick={() => setActiveTab('discounts')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'discounts' ? "text-white" : "text-slate-400 hover:text-white")}>
+            Discount Engine {activeTab === 'discounts' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500" />}
+          </button>
+          <button onClick={() => setActiveTab('passport')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'passport' ? "text-white" : "text-slate-400 hover:text-white")}>
+            Credit Passport {activeTab === 'passport' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-400" />}
           </button>
         </div>
 
@@ -301,6 +324,13 @@ export default function SMEDetail({ session }) {
               )}
             </div>
           )}
+
+          {activeTab === 'hedge' && <PriceHedgePanel smeId={sme.id} />}
+          {activeTab === 'capital' && <CapitalDrawdownPanel smeId={sme.id} />}
+          {activeTab === 'arbitrage' && <VendorArbitragePanel smeId={sme.id} />}
+          {activeTab === 'discounts' && <DiscountEnginePanel smeId={sme.id} />}
+          {activeTab === 'passport' && <CreditPassportPanel smeId={sme.id} />}
+
         </div>
       </div>
     </AppLayout>
