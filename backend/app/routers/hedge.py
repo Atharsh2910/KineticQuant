@@ -20,7 +20,7 @@ async def analyze_price_hedge(req: AnalyzeHedgeRequest):
         from app.services.price_hedge_service import PriceHedgeService
         service = PriceHedgeService()
         result = service.analyze_price_impact(req.sme_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -33,7 +33,7 @@ async def apply_hedge_action(req: ApplyHedgeRequest):
         from app.services.price_hedge_service import PriceHedgeService
         service = PriceHedgeService()
         result = service.apply_hedge_action(req.action_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

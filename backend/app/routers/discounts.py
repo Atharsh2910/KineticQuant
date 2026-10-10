@@ -20,7 +20,7 @@ async def analyze_discounts(req: AnalyzeDiscountRequest):
         from app.services.discount_engine_service import DiscountEngineService
         service = DiscountEngineService()
         result = service.analyze_discounts(req.sme_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -33,7 +33,7 @@ async def execute_discount(req: DiscountActionRequest):
         from app.services.discount_engine_service import DiscountEngineService
         service = DiscountEngineService()
         result = service.execute_discount(req.action_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

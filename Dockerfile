@@ -16,6 +16,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend application
 COPY backend /app/backend
 
+# Copy models directory
+COPY models /app/models
+
 # Set working directory to where 'app' module exists
 WORKDIR /app/backend
 

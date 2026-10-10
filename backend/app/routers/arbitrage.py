@@ -19,7 +19,7 @@ async def analyze_vendor_arbitrage(req: AnalyzeArbitrageRequest):
         from app.services.vendor_arbitrage_service import VendorArbitrageService
         service = VendorArbitrageService()
         result = service.analyze_arbitrage(req.sme_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -32,7 +32,7 @@ async def execute_arbitrage(req: ArbitrageActionRequest):
         from app.services.vendor_arbitrage_service import VendorArbitrageService
         service = VendorArbitrageService()
         result = service.execute_arbitrage(req.action_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

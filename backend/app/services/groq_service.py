@@ -21,7 +21,7 @@ class GroqService:
             
             Provide a JSON response exactly in this format:
             {{
-                "sentiment_multiplier": <float between 0.8 and 1.2, where <1 is negative, >1 is positive, 1.0 is neutral>,
+                "sentiment_multiplier": <float between 0.5 and 1.5, where <1 is negative, >1 is positive, 1.0 is neutral>,
                 "cot_explanation": "<chain of thought explaining the multiplier>"
             }}
             """
@@ -37,7 +37,7 @@ class GroqService:
                         "content": prompt
                     }
                 ],
-                model="mixtral-8x7b-32768",
+                model="openai/gpt-oss-20b",
                 temperature=0.0,
                 response_format={"type": "json_object"}
             )

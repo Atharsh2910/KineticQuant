@@ -3,39 +3,45 @@ import torch.nn as nn
 import numpy as np
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 import logging
-
-logger = logging.getLogger(__name__)
-
-class SimpleLSTM(nn.Module):
-    def __init__(self, input_size=1, hidden_layer_size=10, output_size=1):
-        super().__init__()
-        self.hidden_layer_size = hidden_layer_size
-        self.lstm = nn.LSTM(input_size, hidden_layer_size)
-        self.linear = nn.Linear(hidden_layer_size, output_size)
-        
-    def forward(self, input_seq):
-        lstm_out, _ = self.lstm(input_seq.view(len(input_seq), 1, -1))
-        predictions = self.linear(lstm_out.view(len(input_seq), -1))
-        return predictions[-1]
-
 import os
 import pickle
 
+logger = logging.getLogger(__name__)
+
+class TabularPredictiveModel(nn.Module):
+    def __init__(self, input_dim=10, hidden_dim=64, output_dim=1):
+        super(TabularPredictiveModel, self).__init__()
+        self.network = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Dropout(0.2),
+            nn.Linear(hidden_dim, hidden_dim // 2),
+            nn.ReLU(),
+            nn.Linear(hidden_dim // 2, output_dim)
+        )
+        
+    def forward(self, x):
+        return self.network(x)
+
 class PredictiveEngine:
     def __init__(self):
-        self.lstm_model = SimpleLSTM()
+        self.model = TabularPredictiveModel(input_dim=10)
         # Find project root (3 levels up from this file)
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-        self.lstm_path = os.path.join(base_dir, 'models', 'lstm_model.pt')
+        self.model_path = os.path.join(base_dir, 'models', 'tabular_model.pt')
+        self.scaler_path = os.path.join(base_dir, 'models', 'feature_scalers.pkl')
         self.sarimax_path = os.path.join(base_dir, 'models', 'sarimax_model.pkl')
         
-        if os.path.exists(self.lstm_path):
-            self.lstm_model.load_state_dict(torch.load(self.lstm_path, weights_only=True))
-            logger.info("Loaded pre-trained LSTM model.")
+        self.scalers = None
+        if os.path.exists(self.model_path) and os.path.exists(self.scaler_path):
+            self.model.load_state_dict(torch.load(self.model_path, weights_only=True))
+            with open(self.scaler_path, 'rb') as f:
+                self.scalers = pickle.load(f)
+            logger.info("Loaded pre-trained TabularPredictiveModel.")
         else:
-            logger.warning("Pre-trained LSTM model not found. Using untrained weights.")
+            logger.warning("Pre-trained tabular model or scalers not found. Using untrained weights.")
             
-        self.lstm_model.eval() # inference only
+        self.model.eval() # inference only
         
         self.sarimax_results = None
         if os.path.exists(self.sarimax_path):
@@ -45,26 +51,51 @@ class PredictiveEngine:
         else:
             logger.warning("Pre-trained SARIMAX model not found. Will fit on the fly.")
 
-    def calculate_delta(self, transaction_history: list[float], macro_data: list[float]) -> dict:
+    def calculate_delta(self, transaction_history: list[float], macro_data: list[float], ledger: dict = None, base_score: float = 50.0) -> dict:
         """
-        Calculates volatility delta using LSTM and SARIMAX.
+        Calculates volatility delta using TabularPredictiveModel and SARIMAX.
         """
-        lstm_delta = 0.0
+        tabular_delta = 0.0
         sarimax_delta = 0.0
         cot_parts = []
         
-        # LSTM Prediction for transaction anomalies
-        if len(transaction_history) >= 5:
-            with torch.no_grad():
-                seq = torch.FloatTensor(transaction_history[-5:])
-                pred = self.lstm_model(seq).item()
-                # Simple logic: if prediction is lower than average, negative delta
-                avg = np.mean(transaction_history)
-                variance = (pred - avg) / (avg + 1e-5)
-                lstm_delta = max(min(variance * 10, 10), -10) # cap between -10 and 10
-                cot_parts.append(f"LSTM predicted transaction volume variance of {variance*100:.2f}%, adding {lstm_delta:.2f} to delta.")
-        else:
-            cot_parts.append("Not enough transaction history for LSTM.")
+        # Tabular Prediction for transaction anomalies
+        if ledger is None:
+            ledger = {}
+            
+        cash = float(ledger.get("cash_on_hand", 0))
+        ar = float(ledger.get("accounts_receivable", 0))
+        ap = float(ledger.get("accounts_payable", 0))
+        inventory_costs = float(ledger.get("inventory_holding_costs", 0))
+        
+        # Approximate missing features
+        monthly_revenue = cash * 0.5
+        production_latency_days = 15.0
+        inventory_turnover = 4.0
+        
+        commodity_price_var_pct = 0.0
+        if len(macro_data) >= 2:
+            commodity_price_var_pct = (macro_data[-1] - macro_data[0]) / (macro_data[0] + 1e-5)
+            
+        fx_volatility_index = 1.2
+        freight_cost_var_pct = 0.05
+        
+        features = np.array([
+            monthly_revenue, cash, ar, ap, 
+            production_latency_days, inventory_turnover, commodity_price_var_pct, 
+            fx_volatility_index, freight_cost_var_pct, base_score
+        ], dtype=np.float32)
+        
+        if self.scalers:
+            mean = self.scalers['mean']
+            std = self.scalers['std']
+            features = (features - mean) / (std + 1e-8)
+            
+        with torch.no_grad():
+            tensor_features = torch.FloatTensor(features).unsqueeze(0)
+            pred = self.model(tensor_features).item()
+            tabular_delta = max(min(pred, 15), -15) # cap between -15 and 15
+            cot_parts.append(f"Deep Learning model predicted delta of {tabular_delta:.2f}.")
 
         # SARIMAX for macro trend
         if len(macro_data) >= 10:
@@ -91,7 +122,7 @@ class PredictiveEngine:
         else:
             cot_parts.append("Not enough macro data for SARIMAX.")
             
-        total_delta = lstm_delta + sarimax_delta
+        total_delta = tabular_delta + sarimax_delta
         
         return {
             "delta_score": total_delta,

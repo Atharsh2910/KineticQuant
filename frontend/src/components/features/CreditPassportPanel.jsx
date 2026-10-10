@@ -12,7 +12,7 @@ export default function CreditPassportPanel({ smeId }) {
     setLoading(true)
     try {
       const res = await listPassports(smeId)
-      setPassports(res.data || [])
+      setPassports(Array.isArray(res.data) ? res.data : (res.data?.data || []))
     } catch (e) {
       console.error(e)
     } finally {

@@ -55,7 +55,7 @@ class VendorArbitrageService:
                 # 4. Try Langchain
                 if HAS_LANGCHAIN:
                     try:
-                        llm = ChatGroq(temperature=0, groq_api_key=settings.GROQ_API_KEY, model_name="llama-3.3-70b-versatile")
+                        llm = ChatGroq(temperature=0, groq_api_key=settings.GROQ_API_KEY, model_name="openai/gpt-oss-20b")
                         parser = JsonOutputParser()
                         prompt = ChatPromptTemplate.from_template(
                             "Analyze alternative sourcing for {commodity} currently priced at {primary_cost}. "

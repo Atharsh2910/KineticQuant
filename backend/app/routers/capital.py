@@ -19,7 +19,7 @@ async def analyze_cash_position(req: AnalyzeDrawdownRequest):
         from app.services.capital_drawdown_service import CapitalDrawdownService
         service = CapitalDrawdownService()
         result = service.analyze_cash_position(req.sme_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -32,7 +32,7 @@ async def execute_drawdown(req: DrawdownActionRequest):
         from app.services.capital_drawdown_service import CapitalDrawdownService
         service = CapitalDrawdownService()
         result = service.execute_drawdown(req.drawdown_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -45,7 +45,7 @@ async def repay_drawdown(req: DrawdownActionRequest):
         from app.services.capital_drawdown_service import CapitalDrawdownService
         service = CapitalDrawdownService()
         result = service.repay_drawdown(req.drawdown_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

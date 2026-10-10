@@ -16,7 +16,7 @@ async def generate_passport(req: GeneratePassportRequest):
         from app.services.credit_passport_service import CreditPassportService
         service = CreditPassportService()
         result = service.generate_passport(req.sme_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -30,7 +30,7 @@ async def verify_passport(token: str):
         from app.services.credit_passport_service import CreditPassportService
         service = CreditPassportService()
         result = service.verify_passport(token)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -43,7 +43,7 @@ async def list_passports(sme_id: str):
         from app.services.credit_passport_service import CreditPassportService
         service = CreditPassportService()
         result = service.list_passports(sme_id)
-        return {"status": "success", "data": result}
+        return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
