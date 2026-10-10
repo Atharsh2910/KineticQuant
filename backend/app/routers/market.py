@@ -27,13 +27,23 @@ async def sync_market_data():
         
         for ticker in tickers:
             data = serpapi.get_finance_data(ticker)
-            if data and "markets" in data or "summary" in data:
+            if data and ("markets" in data or "summary" in data):
                 record = {
                     "ticker": ticker,
                     "payload": data
                 }
                 supabase.table("market_time_series").insert(record).execute()
                 inserted_count += 1
+
+        # Fetch broader market trends
+        markets_data = serpapi.get_markets_data("indexes")
+        if markets_data and "markets" in markets_data:
+            record = {
+                "ticker": "MACRO_INDEXES",
+                "payload": markets_data
+            }
+            supabase.table("market_time_series").insert(record).execute()
+            inserted_count += 1
 
         return {"status": "success", "message": f"Synced {inserted_count} market records."}
         

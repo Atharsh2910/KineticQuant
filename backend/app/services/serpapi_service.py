@@ -20,7 +20,7 @@ class SerpApiService:
             }
             search = GoogleSearch(params)
             results = search.get_dict()
-            if "error" in results:
+            if isinstance(results, dict) and "error" in results:
                 logger.error(f"SerpApi error for {ticker}: {results['error']}")
                 return None
             return results
@@ -41,7 +41,7 @@ class SerpApiService:
             }
             search = GoogleSearch(params)
             results = search.get_dict()
-            if "error" in results:
+            if isinstance(results, dict) and "error" in results:
                 logger.error(f"SerpApi error for trend {trend}: {results['error']}")
                 return None
             return results

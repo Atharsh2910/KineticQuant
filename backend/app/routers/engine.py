@@ -71,6 +71,14 @@ async def calculate_fuse(req: CalculateFuseRequest):
                     if title:
                         headlines.append(f"{dep}: {title}")
                         
+        # Fetch broader macro market news
+        markets_data = serpapi.get_markets_data("indexes")
+        if markets_data and "news_results" in markets_data:
+            for news in markets_data["news_results"]:
+                title = news.get("title")
+                if title:
+                    headlines.append(f"Macro Market: {title}")
+                        
         if not headlines:
             headlines.append(f"No recent notable market news found regarding {sme_name}'s dependencies.")
 
