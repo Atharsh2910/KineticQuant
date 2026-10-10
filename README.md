@@ -1,6 +1,10 @@
 # KineticQuantAI
 Dynamic Parametric Financing & Commerce Intelligence Platform.
 
+**Deployment:** [https://kinetic-quant.vercel.app/login](https://kinetic-quant.vercel.app/login)
+- **Login ID:** `admin@kineticquant.ai`
+- **Password:** `password123`
+
 ## Overview
 KineticQuantAI is a closed-loop financial copilot designed to autonomously manage capital, margins, and procurement for SMEs. By blending deterministic financial ledgers with predictive machine learning and agentic AI (LangChain + Groq), the platform executes real-time operational decisions. 
 
