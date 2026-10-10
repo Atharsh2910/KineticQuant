@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { calculateFuse } from '../lib/api'
 import { AppLayout } from '../components/layout/AppLayout'
-import { ArrowLeft, Play, AlertCircle, FileText, TrendingUp, BarChart3, Clock, DollarSign } from 'lucide-react'
+import { ArrowLeft, Play, AlertCircle, FileText, TrendingUp, BarChart3, Clock, IndianRupee, Building2 } from 'lucide-react'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 import { motion } from 'framer-motion'
 import { cn } from '../utils/cn'
@@ -75,7 +75,7 @@ export default function SMEDetail({ session }) {
   if (loading) return (
     <AppLayout session={session}>
       <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div>
       </div>
     </AppLayout>
   )
@@ -91,12 +91,12 @@ export default function SMEDetail({ session }) {
       {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="p-2 mr-4 rounded-lg bg-slate-800 border border-white/5 text-slate-400 hover:text-white transition-colors">
+          <Link to="/" className="p-2 mr-4 rounded-lg bg-zinc-800 border border-white/5 text-zinc-400 hover:text-white transition-colors">
             <ArrowLeft className="w-5 h-5" />
           </Link>
           <div>
             <h1 className="text-2xl font-bold text-white">{sme.name}</h1>
-            <div className="flex items-center mt-1 text-sm text-slate-400 space-x-3">
+            <div className="flex items-center mt-1 text-sm text-zinc-400 space-x-3">
               <span className="flex items-center"><Building2 className="w-4 h-4 mr-1" /> {sme.industry_category}</span>
               <span>•</span>
               <span className="font-mono text-xs">ID: {sme.id.split('-')[0]}...</span>
@@ -107,7 +107,7 @@ export default function SMEDetail({ session }) {
         <button
           onClick={handleCalculateFuse}
           disabled={calculating}
-          className="flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-medium rounded-lg shadow-lg shadow-emerald-500/20 disabled:opacity-50 transition-all transform active:scale-95"
+          className="flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white font-medium rounded-lg shadow-lg shadow-orange-500/20 disabled:opacity-50 transition-all transform active:scale-95"
         >
           <Play className={cn("w-4 h-4 mr-2", calculating && "animate-pulse")} fill="currentColor" />
           {calculating ? 'Processing AI Models...' : 'Run Fuse Engine'}
@@ -120,12 +120,12 @@ export default function SMEDetail({ session }) {
           <div className="glass-panel rounded-xl p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg font-semibold text-white flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-blue-500" />
+                <BarChart3 className="w-5 h-5 mr-2 text-orange-500" />
                 Liquidity Runway
               </h2>
               <div className="flex items-center space-x-4 text-xs font-medium">
                 <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-emerald-500 mr-2"></div> Cash</span>
-                <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-blue-500 mr-2"></div> Receivable</span>
+                <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div> Receivable</span>
                 <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-red-500 mr-2"></div> Payable</span>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function SMEDetail({ session }) {
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
                   <XAxis dataKey="date" stroke="#94A3B8" fontSize={12} tickLine={false} axisLine={false} />
-                  <YAxis stroke="#94A3B8" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(val) => `$${val/1000}k`} />
+                  <YAxis stroke="#94A3B8" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(val) => `Rs. ${val/1000}k`} />
                   <Tooltip 
                     contentStyle={{ backgroundColor: '#1E293B', borderColor: '#334155', borderRadius: '8px', color: '#fff' }}
                     itemStyle={{ fontSize: '14px', fontWeight: 500 }}
@@ -166,12 +166,12 @@ export default function SMEDetail({ session }) {
               <Shield className="w-32 h-32" />
             </div>
             <div>
-              <h3 className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-2">Current Fuse Score</h3>
+              <h3 className="text-sm font-medium text-zinc-400 uppercase tracking-wider mb-2">Current Fuse Score</h3>
               {currentScore ? (
                 <>
                   <div className="flex items-baseline mb-2">
                     <span className="text-6xl font-bold text-white tracking-tighter tabular-nums">{parseFloat(currentScore.fuse_score).toFixed(1)}</span>
-                    <span className="text-lg text-slate-500 ml-2">/ 100</span>
+                    <span className="text-lg text-zinc-500 ml-2">/ 100</span>
                   </div>
                   <div className="flex items-center text-sm font-medium">
                     {scoreChange > 0 ? (
@@ -183,13 +183,13 @@ export default function SMEDetail({ session }) {
                         <TrendingDown className="w-3 h-3 mr-1" /> {scoreChange}
                       </span>
                     ) : (
-                      <span className="text-slate-400 bg-slate-400/10 px-2 py-0.5 rounded">No change</span>
+                      <span className="text-zinc-400 bg-slate-400/10 px-2 py-0.5 rounded">No change</span>
                     )}
-                    <span className="text-slate-500 ml-2">since last run</span>
+                    <span className="text-zinc-500 ml-2">since last run</span>
                   </div>
                 </>
               ) : (
-                <div className="py-8 text-center text-slate-500 border border-dashed border-white/10 rounded-lg">
+                <div className="py-8 text-center text-zinc-500 border border-dashed border-white/10 rounded-lg">
                   No score generated yet.
                 </div>
               )}
@@ -198,16 +198,16 @@ export default function SMEDetail({ session }) {
             {currentScore && (
               <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">Base Risk (Deterministic)</span>
+                  <span className="text-zinc-400">Base Risk (Deterministic)</span>
                   <span className="text-white font-mono">{parseFloat(currentScore.base_score).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">ML Delta (LSTM/SARIMAX)</span>
+                  <span className="text-zinc-400">ML Delta (LSTM/SARIMAX)</span>
                   <span className="text-white font-mono">{parseFloat(currentScore.delta_score).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">NLP Multiplier (Groq)</span>
-                  <span className={cn("font-mono", currentScore.sentiment_multiplier > 1 ? "text-emerald-400" : currentScore.sentiment_multiplier < 1 ? "text-red-400" : "text-slate-300")}>
+                  <span className="text-zinc-400">NLP Multiplier (Groq)</span>
+                  <span className={cn("font-mono", currentScore.sentiment_multiplier > 1 ? "text-emerald-400" : currentScore.sentiment_multiplier < 1 ? "text-red-400" : "text-zinc-300")}>
                     {parseFloat(currentScore.sentiment_multiplier).toFixed(2)}x
                   </span>
                 </div>
@@ -219,36 +219,36 @@ export default function SMEDetail({ session }) {
 
       {/* Tabs */}
       <div className="glass-panel rounded-xl overflow-hidden">
-        <div className="flex border-b border-white/5 bg-slate-900/50 overflow-x-auto hide-scrollbar">
+        <div className="flex border-b border-white/5 bg-zinc-900/50 overflow-x-auto hide-scrollbar">
           <button 
             onClick={() => setActiveTab('overview')}
-            className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'overview' ? "text-white" : "text-slate-400 hover:text-white")}
+            className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'overview' ? "text-white" : "text-zinc-400 hover:text-white")}
           >
             Ledger History
-            {activeTab === 'overview' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />}
+            {activeTab === 'overview' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />}
           </button>
           <button 
             onClick={() => setActiveTab('cot')}
-            className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'cot' ? "text-white" : "text-slate-400 hover:text-white")}
+            className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'cot' ? "text-white" : "text-zinc-400 hover:text-white")}
           >
             Chain of Thought (CoT) Logs
-            {activeTab === 'cot' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />}
+            {activeTab === 'cot' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />}
           </button>
           
-          <button onClick={() => setActiveTab('hedge')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'hedge' ? "text-white" : "text-slate-400 hover:text-white")}>
+          <button onClick={() => setActiveTab('hedge')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'hedge' ? "text-white" : "text-zinc-400 hover:text-white")}>
             Pricing Hedge {activeTab === 'hedge' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-500" />}
           </button>
-          <button onClick={() => setActiveTab('capital')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'capital' ? "text-white" : "text-slate-400 hover:text-white")}>
-            JIT Capital {activeTab === 'capital' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />}
+          <button onClick={() => setActiveTab('capital')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'capital' ? "text-white" : "text-zinc-400 hover:text-white")}>
+            JIT Capital {activeTab === 'capital' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />}
           </button>
-          <button onClick={() => setActiveTab('arbitrage')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'arbitrage' ? "text-white" : "text-slate-400 hover:text-white")}>
+          <button onClick={() => setActiveTab('arbitrage')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'arbitrage' ? "text-white" : "text-zinc-400 hover:text-white")}>
             Vendor Arbitrage {activeTab === 'arbitrage' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-500" />}
           </button>
-          <button onClick={() => setActiveTab('discounts')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'discounts' ? "text-white" : "text-slate-400 hover:text-white")}>
-            Discount Engine {activeTab === 'discounts' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500" />}
+          <button onClick={() => setActiveTab('discounts')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'discounts' ? "text-white" : "text-zinc-400 hover:text-white")}>
+            Discount Engine {activeTab === 'discounts' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />}
           </button>
-          <button onClick={() => setActiveTab('passport')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'passport' ? "text-white" : "text-slate-400 hover:text-white")}>
-            Credit Passport {activeTab === 'passport' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-400" />}
+          <button onClick={() => setActiveTab('passport')} className={cn("px-6 py-4 text-sm font-medium transition-colors relative whitespace-nowrap", activeTab === 'passport' ? "text-white" : "text-zinc-400 hover:text-white")}>
+            Credit Passport {activeTab === 'passport' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-400" />}
           </button>
         </div>
 
@@ -256,7 +256,7 @@ export default function SMEDetail({ session }) {
           {activeTab === 'overview' && (
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left">
-                <thead className="text-xs text-slate-400 uppercase bg-slate-800/50 rounded-lg">
+                <thead className="text-xs text-zinc-400 uppercase bg-zinc-800/50 rounded-lg">
                   <tr>
                     <th className="px-6 py-3 font-medium rounded-l-lg">Date Recorded</th>
                     <th className="px-6 py-3 font-medium text-right">Cash on Hand</th>
@@ -268,19 +268,19 @@ export default function SMEDetail({ session }) {
                 <tbody>
                   {ledgers.map((l) => (
                     <tr key={l.id} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors group">
-                      <td className="px-6 py-4 font-mono text-slate-300">
+                      <td className="px-6 py-4 font-mono text-zinc-300">
                         {new Date(l.recorded_at).toLocaleDateString()}
                       </td>
                       <td className="px-6 py-4 font-mono text-right text-emerald-400">
                         ${parseFloat(l.cash_on_hand).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
-                      <td className="px-6 py-4 font-mono text-right text-blue-400">
+                      <td className="px-6 py-4 font-mono text-right text-orange-400">
                         ${parseFloat(l.accounts_receivable).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
                       <td className="px-6 py-4 font-mono text-right text-red-400">
                         ${parseFloat(l.accounts_payable).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
-                      <td className="px-6 py-4 font-mono text-right text-slate-400">
+                      <td className="px-6 py-4 font-mono text-right text-zinc-400">
                         ${parseFloat(l.inventory_holding_costs).toLocaleString(undefined, {minimumFractionDigits: 2})}
                       </td>
                     </tr>
@@ -293,30 +293,30 @@ export default function SMEDetail({ session }) {
           {activeTab === 'cot' && (
             <div className="space-y-6">
               {history.length === 0 ? (
-                <div className="text-center text-slate-500 py-8">No AI analysis history available.</div>
+                <div className="text-center text-zinc-500 py-8">No AI analysis history available.</div>
               ) : (
                 history.map((record) => (
-                  <div key={record.id} className="bg-slate-800/30 rounded-lg border border-white/5 p-5">
+                  <div key={record.id} className="bg-zinc-800/30 rounded-lg border border-white/5 p-5">
                     <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center text-slate-300 font-mono text-sm">
-                        <Clock className="w-4 h-4 mr-2 text-slate-500" />
+                      <div className="flex items-center text-zinc-300 font-mono text-sm">
+                        <Clock className="w-4 h-4 mr-2 text-zinc-500" />
                         {new Date(record.calculated_at).toLocaleString()}
                       </div>
                       <div className="font-mono text-lg font-bold text-white">Score: {record.fuse_score}</div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-slate-900/50 p-4 rounded border border-white/5">
-                        <h4 className="text-xs font-semibold text-blue-400 mb-2 uppercase tracking-wider">Deterministic Engine</h4>
-                        <p className="text-sm text-slate-300 leading-relaxed">{record.cot_explanation.deterministic_cot}</p>
+                      <div className="bg-zinc-900/50 p-4 rounded border border-white/5">
+                        <h4 className="text-xs font-semibold text-orange-400 mb-2 uppercase tracking-wider">Deterministic Engine</h4>
+                        <p className="text-sm text-zinc-300 leading-relaxed">{record.cot_explanation.deterministic_cot}</p>
                       </div>
-                      <div className="bg-slate-900/50 p-4 rounded border border-white/5">
-                        <h4 className="text-xs font-semibold text-purple-400 mb-2 uppercase tracking-wider">Predictive Engine (ML)</h4>
-                        <p className="text-sm text-slate-300 leading-relaxed">{record.cot_explanation.predictive_cot}</p>
+                      <div className="bg-zinc-900/50 p-4 rounded border border-white/5">
+                        <h4 className="text-xs font-semibold text-orange-400 mb-2 uppercase tracking-wider">Predictive Engine (ML)</h4>
+                        <p className="text-sm text-zinc-300 leading-relaxed">{record.cot_explanation.predictive_cot}</p>
                       </div>
-                      <div className="bg-slate-900/50 p-4 rounded border border-white/5">
+                      <div className="bg-zinc-900/50 p-4 rounded border border-white/5">
                         <h4 className="text-xs font-semibold text-emerald-400 mb-2 uppercase tracking-wider">NLP Sentiment (Groq)</h4>
-                        <p className="text-sm text-slate-300 leading-relaxed italic">"{record.cot_explanation.nlp_cot}"</p>
+                        <p className="text-sm text-zinc-300 leading-relaxed italic">"{record.cot_explanation.nlp_cot}"</p>
                       </div>
                     </div>
                   </div>

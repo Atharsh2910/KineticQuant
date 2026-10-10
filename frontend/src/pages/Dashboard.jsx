@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { syncMarketData } from '../lib/api'
 import { AppLayout } from '../components/layout/AppLayout'
-import { RefreshCw, TrendingUp, DollarSign, Activity, ChevronRight } from 'lucide-react'
+import { RefreshCw, TrendingUp, IndianRupee, Activity, ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Dashboard({ session }) {
@@ -64,12 +64,12 @@ export default function Dashboard({ session }) {
         <div className="flex justify-between items-end mb-6">
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-white mb-1">Portfolio Overview</h1>
-            <p className="text-slate-400">Welcome back. Here's your portfolio's current standing.</p>
+            <p className="text-zinc-400">Welcome back. Here's your portfolio's current standing.</p>
           </div>
           <button
             onClick={handleSyncMarket}
             disabled={syncing}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors shadow-lg shadow-blue-500/25 disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-500 text-white text-sm font-medium rounded-lg transition-colors shadow-lg shadow-orange-500/25 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${syncing ? 'animate-spin' : ''}`} />
             {syncing ? 'Syncing Market...' : 'Sync Market Data'}
@@ -79,15 +79,15 @@ export default function Dashboard({ session }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="glass-panel rounded-xl p-6 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
-              <DollarSign className="w-16 h-16" />
+              <IndianRupee className="w-16 h-16" />
             </div>
-            <p className="text-sm font-medium text-slate-400 mb-1">Total AUM</p>
-            <p className="text-3xl font-bold text-white font-mono tracking-tight">$42,500,000</p>
+            <p className="text-sm font-medium text-zinc-400 mb-1">Total AUM</p>
+            <p className="text-3xl font-bold text-white font-mono tracking-tight">Rs. 42,500,000</p>
             <div className="mt-4 flex items-center text-sm">
               <span className="text-emerald-400 flex items-center bg-emerald-400/10 px-2 py-0.5 rounded font-medium">
                 <TrendingUp className="w-3 h-3 mr-1" /> +14.2%
               </span>
-              <span className="text-slate-500 ml-2">vs last month</span>
+              <span className="text-zinc-500 ml-2">vs last month</span>
             </div>
           </motion.div>
 
@@ -95,10 +95,10 @@ export default function Dashboard({ session }) {
             <div className="absolute top-0 right-0 p-4 opacity-10">
               <Activity className="w-16 h-16" />
             </div>
-            <p className="text-sm font-medium text-slate-400 mb-1">Active SMEs</p>
+            <p className="text-sm font-medium text-zinc-400 mb-1">Active SMEs</p>
             <p className="text-3xl font-bold text-white font-mono tracking-tight">{smes.length}</p>
             <div className="mt-4 flex items-center text-sm">
-              <span className="text-blue-400 flex items-center bg-blue-400/10 px-2 py-0.5 rounded font-medium">
+              <span className="text-orange-400 flex items-center bg-orange-400/10 px-2 py-0.5 rounded font-medium">
                 Active Portfolio
               </span>
             </div>
@@ -108,13 +108,13 @@ export default function Dashboard({ session }) {
             <div className="absolute top-0 right-0 p-4 opacity-10">
               <TrendingUp className="w-16 h-16" />
             </div>
-            <p className="text-sm font-medium text-slate-400 mb-1">Avg. Fuse Score</p>
+            <p className="text-sm font-medium text-zinc-400 mb-1">Avg. Fuse Score</p>
             <p className="text-3xl font-bold text-white font-mono tracking-tight">84.2</p>
             <div className="mt-4 flex items-center text-sm">
               <span className="text-emerald-400 flex items-center bg-emerald-400/10 px-2 py-0.5 rounded font-medium">
                 Low Risk
               </span>
-              <span className="text-slate-500 ml-2">portfolio average</span>
+              <span className="text-zinc-500 ml-2">portfolio average</span>
             </div>
           </motion.div>
         </div>
@@ -126,19 +126,19 @@ export default function Dashboard({ session }) {
           <input 
             type="text" 
             placeholder="Filter SMEs..." 
-            className="pl-3 pr-10 py-1.5 bg-slate-900/50 border border-white/10 rounded-lg text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50"
+            className="pl-3 pr-10 py-1.5 bg-zinc-900/50 border border-white/10 rounded-lg text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50"
           />
         </div>
       </div>
 
       {loading ? (
         <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div>
         </div>
       ) : smes.length === 0 ? (
         <div className="glass-panel rounded-xl p-12 text-center border-dashed">
-          <p className="text-slate-400 mb-2">Your portfolio is currently empty.</p>
-          <p className="text-xs text-slate-500 font-mono">{session.user.id}</p>
+          <p className="text-zinc-400 mb-2">Your portfolio is currently empty.</p>
+          <p className="text-xs text-zinc-500 font-mono">{session.user.id}</p>
         </div>
       ) : (
         <motion.div 
@@ -154,36 +154,36 @@ export default function Dashboard({ session }) {
                 className="block glass-card rounded-xl p-6 group h-full"
               >
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">
                     {sme.name}
                   </h3>
-                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all" />
+                  <ChevronRight className="w-5 h-5 text-zinc-500 group-hover:text-orange-400 transform group-hover:translate-x-1 transition-all" />
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-slate-400">Industry</span>
-                    <span className="text-xs font-medium text-slate-300 bg-slate-800 px-2 py-1 rounded-md border border-white/5">
+                    <span className="text-xs text-zinc-400">Industry</span>
+                    <span className="text-xs font-medium text-zinc-300 bg-zinc-800 px-2 py-1 rounded-md border border-white/5">
                       {sme.industry_category}
                     </span>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-slate-400">Dependencies</span>
+                    <span className="text-xs text-zinc-400">Dependencies</span>
                     <div className="flex gap-1">
                       {sme.supply_chain_dependencies?.slice(0,2).map(dep => (
-                        <span key={dep} className="text-[10px] font-mono text-purple-300 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">
+                        <span key={dep} className="text-[10px] font-mono text-orange-300 bg-orange-500/10 px-1.5 py-0.5 rounded border border-orange-500/20">
                           {dep}
                         </span>
                       ))}
                       {sme.supply_chain_dependencies?.length > 2 && (
-                        <span className="text-[10px] text-slate-400">+{sme.supply_chain_dependencies.length - 2}</span>
+                        <span className="text-[10px] text-zinc-400">+{sme.supply_chain_dependencies.length - 2}</span>
                       )}
                     </div>
                   </div>
                   
                   <div className="pt-3 border-t border-white/5 flex justify-between items-center">
-                    <span className="text-xs text-slate-500">Added {new Date(sme.created_at).toLocaleDateString()}</span>
+                    <span className="text-xs text-zinc-500">Added {new Date(sme.created_at).toLocaleDateString()}</span>
                   </div>
                 </div>
               </Link>

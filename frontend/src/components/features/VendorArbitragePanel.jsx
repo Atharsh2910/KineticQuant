@@ -50,7 +50,7 @@ export default function VendorArbitragePanel({ smeId }) {
       <div className="flex justify-between items-center">
         <div>
           <h3 className="text-lg font-semibold text-white">Multi-Vendor Inventory Arbitrage</h3>
-          <p className="text-sm text-slate-400">Agentic procurement routing based on global pricing and freight data.</p>
+          <p className="text-sm text-zinc-400">Agentic procurement routing based on global pricing and freight data.</p>
         </div>
         <button
           onClick={handleAnalyze}
@@ -65,7 +65,7 @@ export default function VendorArbitragePanel({ smeId }) {
       {loading ? (
         <div className="flex justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500"></div></div>
       ) : history.length === 0 ? (
-        <div className="glass-panel p-8 text-center text-slate-500">No vendor arbitrage actions recorded.</div>
+        <div className="glass-panel p-8 text-center text-zinc-500">No vendor arbitrage actions recorded.</div>
       ) : (
         <div className="grid grid-cols-1 gap-4">
           {history.map(item => (
@@ -74,10 +74,10 @@ export default function VendorArbitragePanel({ smeId }) {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-white font-medium">{item.commodity}</span>
-                    <span className="text-slate-500 text-sm">Shift to</span>
+                    <span className="text-zinc-500 text-sm">Shift to</span>
                     <span className="text-indigo-400 font-medium">{item.alternative_vendor}</span>
                   </div>
-                  <p className="text-xs text-slate-500 italic max-w-2xl">LangChain Agent: {item.agent_reasoning?.reason}</p>
+                  <p className="text-xs text-zinc-500 italic max-w-2xl">LangChain Agent: {item.agent_reasoning?.reason}</p>
                 </div>
                 {item.status === 'proposed' ? (
                   <button onClick={() => handleExecute(item.id)} className="px-3 py-1.5 bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 rounded-lg transition-colors font-medium text-sm flex items-center gap-2">
@@ -92,15 +92,15 @@ export default function VendorArbitragePanel({ smeId }) {
               
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/5">
                 <div>
-                  <p className="text-xs text-slate-500 mb-1">Primary Cost</p>
-                  <p className="text-sm font-mono text-slate-300">${item.primary_unit_cost}</p>
+                  <p className="text-xs text-zinc-500 mb-1">Primary Cost</p>
+                  <p className="text-sm font-mono text-zinc-300">Rs. {item.primary_unit_cost}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 mb-1">Alternative Cost</p>
-                  <p className="text-sm font-mono text-emerald-400">${item.alternative_unit_cost}</p>
+                  <p className="text-xs text-zinc-500 mb-1">Alternative Cost</p>
+                  <p className="text-sm font-mono text-emerald-400">Rs. {item.alternative_unit_cost}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs text-slate-500 mb-1">Potential Savings</p>
+                  <p className="text-xs text-zinc-500 mb-1">Potential Savings</p>
                   <p className="text-sm font-mono font-bold text-emerald-400">+{item.potential_savings_pct.toFixed(2)}%</p>
                 </div>
               </div>

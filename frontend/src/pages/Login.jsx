@@ -28,17 +28,17 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-obsidian flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background glowing orbs */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/20 blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-orange-600/20 blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-orange-600/20 blur-[120px] pointer-events-none"></div>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10">
-        <div className="flex justify-center text-blue-500">
+        <div className="flex justify-center text-orange-500">
           <Building2 className="w-12 h-12" />
         </div>
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white">
           KineticQuant AI
         </h2>
-        <p className="mt-2 text-center text-sm text-slate-400">
+        <p className="mt-2 text-center text-sm text-zinc-400">
           Advanced Engine for Parametric SME Financing
         </p>
       </div>
@@ -52,7 +52,7 @@ export default function Login() {
               </div>
             )}
             <div>
-              <label className="block text-sm font-medium text-slate-300">
+              <label className="block text-sm font-medium text-zinc-300">
                 Email address
               </label>
               <div className="mt-1">
@@ -61,14 +61,14 @@ export default function Login() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full appearance-none rounded-lg border border-white/10 bg-slate-900/50 px-3 py-2 text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none focus:ring-1 focus:ring-blue-500/50 sm:text-sm transition-all"
+                  className="block w-full appearance-none rounded-lg border border-white/10 bg-zinc-900/50 px-3 py-2 text-white placeholder-slate-500 focus:border-orange-500/50 focus:outline-none focus:ring-1 focus:ring-orange-500/50 sm:text-sm transition-all"
                   placeholder="admin@kineticquant.ai"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-300">
+              <label className="block text-sm font-medium text-zinc-300">
                 Password
               </label>
               <div className="mt-1">
@@ -77,7 +77,7 @@ export default function Login() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full appearance-none rounded-lg border border-white/10 bg-slate-900/50 px-3 py-2 text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none focus:ring-1 focus:ring-blue-500/50 sm:text-sm transition-all"
+                  className="block w-full appearance-none rounded-lg border border-white/10 bg-zinc-900/50 px-3 py-2 text-white placeholder-slate-500 focus:border-orange-500/50 focus:outline-none focus:ring-1 focus:ring-orange-500/50 sm:text-sm transition-all"
                   placeholder="••••••••"
                 />
               </div>
@@ -87,7 +87,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={loading}
-                className="group relative flex w-full justify-center rounded-lg border border-transparent bg-blue-600 py-2.5 px-4 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-blue-600/30"
+                className="group relative flex w-full justify-center rounded-lg border border-transparent bg-orange-600 py-2.5 px-4 text-sm font-medium text-white hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-orange-600/30"
               >
                 {loading ? 'Authenticating...' : 'Sign in to platform'}
                 {!loading && <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />}
