@@ -67,3 +67,9 @@ KineticQuantAI is a closed-loop financial copilot designed to autonomously manag
 2. Install dependencies: `npm install`
 3. Set up the `frontend/.env` file.
 4. Run the development server: `npm run dev`
+
+<img width="1916" height="912" alt="image" src="https://github.com/user-attachments/assets/710ced00-28b9-46a9-b737-aba25414ae51" />
+<img width="1903" height="907" alt="image" src="https://github.com/user-attachments/assets/64bdaceb-1d0f-4b2f-8e21-41cdf869cf7f" />
+<img width="1907" height="912" alt="image" src="https://github.com/user-attachments/assets/30e40165-358a-4afd-8f0c-8d3eab4e05ed" />
+<img width="1907" height="913" alt="image" src="https://github.com/user-attachments/assets/bfd2e0b4-05d4-4c2b-a245-d919548895d0" />
+<img width="1913" height="922" alt="image" src="https://github.com/user-attachments/assets/48a8596c-8399-4cea-90c3-a1c14620540c" />
